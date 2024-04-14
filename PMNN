@@ -1,3 +1,5 @@
+import random
+
 def PositiveMultiplierNN(input1, input2):
     weight = random.random()
     lr = 0.1
@@ -13,3 +15,7 @@ def PositiveMultiplierNN(input1, input2):
         
     print("Desired answer: ", target)
     print("Prediction: ", output)
+
+x = int(input())
+y = int(input())
+PositiveMultiplierNN(x, y)
