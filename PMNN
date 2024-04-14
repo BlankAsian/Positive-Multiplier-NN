@@ -1,0 +1,15 @@
+def PositiveMultiplierNN(input1, input2):
+    weight = random.random()
+    lr = 0.1
+    iterations = 1000
+    accuracy = 0.001
+    target = input1 * input2
+    for i in range(iterations):
+        output = weight * input1 * input2
+        error = target - output
+        weight = weight + lr * weight * error
+        if error < accuracy and error > 0 - accuracy:
+            break
+        
+    print("Desired answer: ", target)
+    print("Prediction: ", output)
